@@ -7,9 +7,10 @@ import java.util.List;
 public class SelectionSort {
 
     public List<Integer> selectionSort(List<Integer> input) {
+        List<Integer> copy = new ArrayList<>(input);
         List<Integer> sortedList = new LinkedList<>();
-        while (input.size() != 0) {
-            sortedList.add(input.remove(findMinimum(input)));
+        while (copy.size() != 0) {
+            sortedList.add(copy.remove(findMinimum(copy)));
         }
         return sortedList;
     }
